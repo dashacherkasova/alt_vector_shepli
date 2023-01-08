@@ -120,7 +120,10 @@ int main()
 		{
 			cin.clear();
 			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			cout << "Ошибка ввода. попробуйте еще раз" << endl;
+			cout << "Ошибка ввода. Попробуйте еще раз" << endl;
+		}
+		else if (count <= 0) {
+			cout << "Число должно быть >0. Попробуйте еще раз" << endl;
 		}
 		else {
 			flag = 0;
@@ -146,6 +149,9 @@ int main()
 				cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				cout << "Ошибка ввода. попробуйте еще раз" << endl;
 			}
+			else if (power <= 0) {
+				cout << "Число должно быть >0. Попробуйте еще раз"  << endl;
+			}
 			else {
 				flag = 0;
 			}
@@ -167,6 +173,9 @@ int main()
 			cin.clear();
 			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			cout << "Ошибка ввода. попробуйте еще раз" << endl;
+		}
+		else if (rule <= 0||rule>sum_power) {
+			cout << "Число должно быть >0 и меньше суммарного количества голосов игроков. Попробуйте еще раз" << endl;
 		}
 		else {
 			flag = 0;
